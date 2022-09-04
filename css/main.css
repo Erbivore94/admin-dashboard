@@ -1,3 +1,10 @@
-body {
-    background-color: green;
+html {
+    box-sizing: border-box;
+    height: 100vh;
+    font-size: 16px;
+    background-color: lightgrey;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
