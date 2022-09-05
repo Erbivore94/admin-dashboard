@@ -25,6 +25,22 @@ html {
     grid-template: 8rem 1fr / 18rem 1fr;
 }
 
+/* --- SIDEBAR & HEADER --- 
+
+.grid {
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.row {
+    padding: .25rem;
+    font-size: 1.15rem;
+    text-decoration: none;
+}
+
+*/
+
 /* --- SIDEBAR --- */
 
 .sidebar {
@@ -35,12 +51,12 @@ html {
 }
 
 .sidebar-grid {
-    height: 35rem;
+    height: auto;
     padding: 1rem;
 
     display: grid;
-    grid-template: 2fr repeat(11, 1fr) / 1fr;
-    gap: 1rem;
+    grid-template: 1.5fr repeat(11, 1fr) / 1fr;
+    gap: .5rem;
 }
 
 .sidebar-row {
@@ -78,6 +94,12 @@ a.sidebar-row:active {
 
 .sidebar-row p {
     color: var(--blank);
+    align-self: center;
+}
+
+.sidebar-row.dashboard,
+.sidebar-row.empty {
+    border: none;
 }
 
 .sidebar-row.dashboard img {
@@ -92,18 +114,24 @@ a.sidebar-row:active {
 /* --- HEADER --- */
 
 .header {
-    background-color: var(--blank);
+    background-color: green;
 
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
 
 .header-grid-1 {
+    height: 1.5rem;
+    margin: 1.25rem;
     border: red solid;
-    padding: 1rem;
 
     display: grid;
-    grid-template: 1rem / 1rem 5fr 1rem 1rem 3rem;
+    grid-template: 1fr / 1fr 3rem 3rem 10rem;
+    gap: 1rem;
+}
+
+.header-grid-1 img {
+    height: 1.5rem;
 }
 
 /* --- MAIN CONTENT --- */
