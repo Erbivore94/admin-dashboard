@@ -36,21 +36,23 @@ html {
 
 .sidebar-grid {
     height: 35rem;
-    display: grid;
-    grid-template: 2fr repeat(11, 1fr) / 1fr;
     gap: 1rem;
     padding: 1rem;
+
+    display: grid;
+    grid-template: 2fr repeat(11, 1fr) / 1fr;
 }
 
 .sidebar-row {
-    display: grid;
-    grid-template: 1fr / 1fr 4fr;
-    gap: 1rem;
     padding: .25rem;
     border-radius: 1rem;
     text-decoration: none;
     font-size: 1.15rem;
     border: solid transparent;
+
+    display: grid;
+    grid-template: 1fr / 1fr 4fr;
+    gap: 1rem;
 }
 
 a.sidebar-row:hover {
@@ -75,10 +77,11 @@ a.sidebar-row:active {
 }
 
 .sidebar-row p {
+    color: var(--blank);
+
     display: grid;
     align-items: center;
     justify-items: start;
-    color: var(--blank);
 }
 
 .sidebar-row.dashboard img {
