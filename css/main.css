@@ -36,11 +36,11 @@ html {
 
 .sidebar-grid {
     height: 35rem;
-    gap: 1rem;
     padding: 1rem;
 
     display: grid;
     grid-template: 2fr repeat(11, 1fr) / 1fr;
+    gap: 1rem;
 }
 
 .sidebar-row {
@@ -78,10 +78,6 @@ a.sidebar-row:active {
 
 .sidebar-row p {
     color: var(--blank);
-
-    display: grid;
-    align-items: center;
-    justify-items: start;
 }
 
 .sidebar-row.dashboard img {
@@ -100,6 +96,14 @@ a.sidebar-row:active {
 
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+}
+
+.header-grid-1 {
+    border: red solid;
+    padding: 1rem;
+
+    display: grid;
+    grid-template: 1rem / 1rem 5fr 1rem 1rem 3rem;
 }
 
 /* --- MAIN CONTENT --- */
