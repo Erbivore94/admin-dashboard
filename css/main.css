@@ -46,8 +46,23 @@ html {
     display: grid;
     grid-template: 1fr / 1fr 4fr;
     gap: 1rem;
-
+    padding: .25rem;
+    border-radius: 1rem;
+    text-decoration: none;
     font-size: 1.15rem;
+    border: solid transparent;
+}
+
+a.sidebar-row:hover {
+    background-color: var(--text-normal);
+}
+
+a.sidebar-row:hover p {
+    color: var(--accent);
+}
+
+a.sidebar-row:active {
+    border: solid var(--blank);
 }
 
 .sidebar-row .img-container {
