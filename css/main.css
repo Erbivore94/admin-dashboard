@@ -47,28 +47,32 @@ html {
     grid-template: 1fr / 1fr 4fr;
     gap: 1rem;
 
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
-.sidebar-row.dashboard {
-    font-size: 1.75rem;
-    font-weight: 600;
+.sidebar-row .img-container {
+    display: grid;
+    place-items: center;
 }
 
-.sidebar-icon,
-.sidebar-text {
-    color: var(--blank);
+.sidebar-row img {
+    height: 1.15rem;
+}
 
+.sidebar-row p {
     display: grid;
     align-items: center;
-}
-
-.sidebar-icon {
-    justify-items: center;
-}
-
-.sidebar-text {
     justify-items: start;
+    color: var(--blank);
+}
+
+.sidebar-row.dashboard img {
+    height: 3rem;
+}
+
+.sidebar-row.dashboard p {
+    font-size: 1.75rem;
+    font-weight: 600;
 }
 
 /* --- HEADER --- */
