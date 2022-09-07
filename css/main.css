@@ -91,6 +91,7 @@ a.sidebar-row:active {
 .sidebar-row.dashboard,
 .sidebar-row.empty {
     border: none;
+    padding: 0 var(--grid-padding);
 }
 
 .sidebar-row.dashboard img {
@@ -133,7 +134,7 @@ a.sidebar-row:active {
     grid-template: auto / auto 1fr;
     gap: 1rem;
     align-items: center;
-    justify-items: start;
+    justify-items: center;
 }
 
 .header-grid-1 form button {
@@ -146,6 +147,7 @@ a.sidebar-row:active {
 .header-grid-1 form input {
     height: 2rem;
     padding: .5rem .75rem;
+    justify-self: start;
     font-size: .9rem;
     font-family: 'Poppins', sans-serif;
     width: 75%;
