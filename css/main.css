@@ -137,9 +137,7 @@ a.sidebar-row:active {
     grid-row: 1 / 2;
 }
 
-.header-grid-1,
-.header-grid-2 {
-    height: var(--main-row-height);
+.header > div {
     margin: var(--grid-margin) 2rem;
     padding: var(--grid-padding);
     color: var(--text-emphasis);
@@ -150,14 +148,34 @@ a.sidebar-row:active {
     align-items: center;
 }
 
-.header-grid-1 .left,
-.header-grid-2 .left {
+.header > div .left {
     justify-self: left;
 }
 
-.header-grid-1 .right,
-.header-grid-2 .right {
+.header > div .right {
     justify-self: right;
+
+}
+
+.header > div a {
+    height: fit-content;
+}
+
+.header > div a:link {
+    color: var(--text-emphasis);
+}
+
+.header > div a:visited {
+    color: var(--text-emphasis);
+}
+
+.header-grid-1 {
+    height: var(--main-row-height);
+    grid-template: 1fr / minmax(20rem, 1fr) 1.5rem 3rem auto;
+}
+
+.header-grid-2 {
+    height: 5rem;
 }
 
 .header-grid-1 form {
@@ -188,20 +206,6 @@ a.sidebar-row:active {
 
 .header-grid-1 form input:focus {
     border: solid var(--accent);
-}
-
-.header-grid-1 a {
-    height: fit-content;
-}
-
-.header-grid-1 a:link,
-.header-grid-2 a:link{
-    color: var(--text-emphasis);
-}
-
-.header-grid-1 a:visited,
-.header-grid-2 a:visited{
-    color: var(--text-emphasis);
 }
 
 /* --- MAIN CONTENT --- */
