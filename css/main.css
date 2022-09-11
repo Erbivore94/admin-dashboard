@@ -54,7 +54,7 @@ img {
     --sidebar-width: 18rem;
 
     --icon: 1.5rem;
-    --profile-small: 3rem;
+    --profile-small: 3.5rem;
     --profile-large: 4.5rem;
 }
 
@@ -147,53 +147,52 @@ a.sidebar-row:active {
 
 .header {
     background-color: var(--blank);
+    color: var(--text-emphasis);
     box-shadow: 0 .1rem 1rem .1rem var(--box-shadow);
 
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
 
-.header > div {
-    padding: var(--grid-padding);
-    color: var(--text-emphasis);
+.header-grid {
+    margin: var(--grid-margin) 2rem;
 
+    display: grid;
+    grid-template: var(--main-row-height) auto / 1fr;
+}
+
+.header-grid > div {
     display: grid;
     gap: 1rem;
     align-items: center;
 }
 
-.header > div a {
-    height: fit-content;
-}
-
-.header > div a:link {
+.header-grid > div a:link {
     color: var(--text-emphasis);
 }
 
-.header > div a:visited {
+.header-grid > div a:visited {
     color: var(--text-emphasis);
 }
 
-.header-grid-1 {
-    height: var(--main-row-height);
-    margin: var(--grid-margin) 2rem .25rem;
+.header-row-1 {
     grid-template: 1fr / minmax(20rem, 1fr) var(--icon) var(--profile-small) auto;
 }
 
-.header-grid-1 form {
+.header-row-1 form {
     display: grid;
     grid-template: auto / auto 1fr;
     gap: 1rem;
     align-items: center;
 }
 
-.header-grid-1 form button {
+.header-row-1 form button {
     border: 0;
     background-color: transparent;
 }
 
-.header-grid-1 form input {
-    height: 2rem;
+.header-row-1 form input {
+    height: 80%;
     width: 80%;
     padding: .5rem .75rem;
     justify-self: start;
@@ -205,22 +204,20 @@ a.sidebar-row:active {
     border-radius: 1rem;
 }
 
-.header-grid-1 form input:focus {
+.header-row-1 form input:focus {
     border: solid var(--accent);
 }
 
-.header-grid-2 {
-    height: 5rem;
-    margin: .25rem 2rem var(--grid-margin);
+.header-row-2 {
     grid-template: 1fr / var(--profile-large) auto 1fr repeat(3, 5.5rem);
 }
 
-.header-grid-2 p span {
+.header-row-2 p span {
     font-size: 1.35rem;
     font-weight: 600;
 }
 
-.header-grid-2 button {
+.header-row-2 button {
     border: solid transparent;
     border-radius: 1rem;
     padding: var(--grid-padding);
@@ -230,12 +227,12 @@ a.sidebar-row:active {
     background-color: var(--primary);
 }
 
-.header-grid-2 button:hover {
+.header-row-2 button:hover {
     background-color: var(--text-normal);
     color: var(--accent);
 }
 
-.header-grid-2 button:active {
+.header-row-2 button:active {
     border: solid var(--accent);
 }
 
