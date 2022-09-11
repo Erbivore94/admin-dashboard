@@ -27,8 +27,9 @@ html {
     outline: none;
 }
 
-a {
+a, a:visited {
     text-decoration: none;
+    color: inherit;
 }
 
 button {
@@ -48,8 +49,9 @@ img {
     display: grid;
     grid-template: auto 1fr / var(--sidebar-width) 1fr;
 
-    --grid-margin: 1rem;
-    --grid-padding: .25rem;
+    --margin: 1rem;
+    --padding-small: .25rem;
+    --padding-large: .75rem;
     --main-row-height: 3.5rem;
     --sidebar-width: 18rem;
 
@@ -75,9 +77,25 @@ img {
     border-radius: 50%;
 }
 
+h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
 /* --- SIDEBAR --- */
 
 .sidebar {
+    color: var(--blank);
     background-color: var(--primary);
     z-index: 1;
 
@@ -87,7 +105,7 @@ img {
 
 .sidebar-grid {
     height: auto;
-    margin: var(--grid-margin);
+    margin: var(--margin);
 
     display: grid;
     grid-template: var(--main-row-height) .5fr repeat(6, 1fr) .5fr repeat(3, 1fr) / 1fr;
@@ -95,7 +113,7 @@ img {
 }
 
 .sidebar-row {
-    padding: var(--grid-padding);
+    padding: var(--padding-small);
     border-radius: 1rem;
     font-size: 1.15rem;
     border: solid transparent;
@@ -110,7 +128,7 @@ a.sidebar-row:hover {
     background-color: var(--text-normal);
 }
 
-a.sidebar-row:hover p {
+a.sidebar-row:hover h2 {
     color: var(--accent);
 }
 
@@ -123,24 +141,18 @@ a.sidebar-row:active {
     place-items: center;
 }
 
-.sidebar-row p {
-    color: var(--blank);
+.sidebar-row h2 {
     align-self: center;
 }
 
 .sidebar-row.dashboard,
 .sidebar-row.empty {
     border: none;
-    padding: 0 var(--grid-padding);
+    padding: 0 var(--padding-small);
 }
 
 .sidebar-row.dashboard img {
     height: auto;
-}
-
-.sidebar-row.dashboard p {
-    font-size: 1.75rem;
-    font-weight: 600;
 }
 
 /* --- HEADER --- */
@@ -155,7 +167,7 @@ a.sidebar-row:active {
 }
 
 .header-grid {
-    margin: var(--grid-margin) 2rem;
+    margin: var(--margin) 2rem;
 
     display: grid;
     grid-template: var(--main-row-height) auto / 1fr;
@@ -220,9 +232,9 @@ a.sidebar-row:active {
 .header-row-2 button {
     border: solid transparent;
     border-radius: 1rem;
-    padding: var(--grid-padding);
+    padding: var(--padding-small);
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: .85rem;
     color: var(--blank);
     background-color: var(--primary);
 }
@@ -250,15 +262,27 @@ a.sidebar-row:active {
 
 .main-content-grid {
     height: auto;
-    margin: var(--grid-margin);
-    background-color: red;
+    margin: var(--margin);
+    font-size: .85rem;
 
     display: grid;
-    grid-template: 1fr / 1fr 10rem;
-    gap: 1rem;
+    grid-template: 1fr 1fr / 1fr 17.5rem;
+    gap: 2rem 1rem;
 }
 
-.left,
-.right {
-    background-color: greenyellow;
+.projects {
+    background-color: red;
+    grid-row: 1 / 3;
+}
+
+.info-panel {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: .5rem;
+}
+
+.info-panel div {
+    background-color: var(--blank);
+    border-radius: .5rem;
+    padding: var(--padding-large);
 }
