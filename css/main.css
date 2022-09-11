@@ -247,4 +247,21 @@ a.sidebar-row:active {
 
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+
+    display: grid;
+}
+
+.main-content-grid {
+    height: auto;
+    margin: var(--grid-margin);
+    background-color: red;
+
+    display: grid;
+    grid-template: 1fr / 1fr 10rem;
+    gap: 1rem;
+}
+
+.left,
+.right {
+    background-color: greenyellow;
 }
