@@ -25,6 +25,18 @@ html {
     outline: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+p {
+    white-space: nowrap;
+}
+
+img {
+    display: block;
+}
+
 .container {
     min-height: 100vh;
     display: grid;
@@ -34,26 +46,22 @@ html {
     --grid-padding: .25rem;
     --main-row-height: 3.5rem;
     --sidebar-width: 18rem;
-}
 
-a {
-    text-decoration: none;
-}
-
-img {
-    display: block;
+    --icon: 1.5rem;
+    --profile-small: 3rem;
+    --profile-large: 4.5rem;
 }
 
 .icon {
-    height: 1.5rem;
+    height: var(--icon);
 }
 
 .profile-small {
-    height: 3rem;
+    height: var(--profile-small);
 }
 
 .profile-large {
-    height: 5rem;
+    height: var(--profile-large);
 }
 
 .profile-small,
@@ -138,23 +146,12 @@ a.sidebar-row:active {
 }
 
 .header > div {
-    margin: var(--grid-margin) 2rem;
     padding: var(--grid-padding);
     color: var(--text-emphasis);
 
     display: grid;
-    grid-template: 1fr / minmax(20rem, 1fr) 1.5rem 3rem auto;
     gap: 1rem;
     align-items: center;
-}
-
-.header > div .left {
-    justify-self: left;
-}
-
-.header > div .right {
-    justify-self: right;
-
 }
 
 .header > div a {
@@ -171,11 +168,8 @@ a.sidebar-row:active {
 
 .header-grid-1 {
     height: var(--main-row-height);
-    grid-template: 1fr / minmax(20rem, 1fr) 1.5rem 3rem auto;
-}
-
-.header-grid-2 {
-    height: 5rem;
+    margin: var(--grid-margin) 2rem .25rem;
+    grid-template: 1fr / minmax(20rem, 1fr) var(--icon) var(--profile-small) auto;
 }
 
 .header-grid-1 form {
@@ -206,6 +200,17 @@ a.sidebar-row:active {
 
 .header-grid-1 form input:focus {
     border: solid var(--accent);
+}
+
+.header-grid-2 {
+    height: 5rem;
+    margin: .25rem 2rem var(--grid-margin);
+    grid-template: 1fr / var(--profile-large) auto 1fr repeat(3, 5rem);
+}
+
+.header-grid-2 p span {
+    font-size: 1.35rem;
+    font-weight: 600;
 }
 
 /* --- MAIN CONTENT --- */
