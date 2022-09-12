@@ -51,7 +51,7 @@ img {
 
     --margin: 1rem;
     --padding-small: .25rem;
-    --padding-large: .75rem;
+    --padding-large: 1rem;
     --main-row-height: 3.5rem;
     --sidebar-width: 18rem;
 
@@ -88,7 +88,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 500;
 }
 
@@ -264,11 +264,10 @@ a.sidebar-row:active {
 .main-content-grid {
     height: auto;
     margin: var(--margin);
-    font-size: .85rem;
 
     display: grid;
-    grid-template: 1fr 1fr / 1fr 17.5rem;
-    gap: 2rem 1rem;
+    grid-template: 1fr 1fr / 1fr 15rem;
+    gap: 1rem;
 }
 
 .projects {
@@ -280,10 +279,27 @@ a.sidebar-row:active {
     display: grid;
     grid-template-rows: auto 1fr;
     gap: .5rem;
+    font-size: .75rem;
 }
 
-.info-panel div {
+.info-panel > div {
     background-color: var(--blank);
     border-radius: .5rem;
-    padding: var(--padding-large);
+    padding: var(--padding-small);
+}
+
+.info-panel > div > div {
+    margin: var(--margin);
+    padding-bottom: var(--padding-large);
+    border-bottom: var(--background) solid 1px;
+}
+
+.info-panel > div > div:nth-child(3) {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.info-panel p {
+    white-space: normal; 
+    color: var(--text-normal);
 }
