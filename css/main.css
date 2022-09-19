@@ -290,16 +290,23 @@ a.sidebar-row:active {
 
 .info-panel > div > div {
     margin: var(--margin);
-    padding-bottom: var(--padding-large);
-    border-bottom: var(--background) solid 1px;
+    padding-top: var(--padding-large);
+    border-top: var(--background) solid 1px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
-.info-panel > div > div:nth-child(3) {
-    padding-bottom: 0;
-    border-bottom: 0;
+.info-panel > div > div:first-child {
+    padding-top: 0;
+    border-top: 0;
 }
 
 .info-panel p {
     white-space: normal; 
     color: var(--text-normal);
+    line-height: .85rem;
 }
