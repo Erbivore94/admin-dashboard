@@ -282,6 +282,11 @@ a.sidebar-row:active {
     font-size: .75rem;
 }
 
+.info-panel {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
 .info-panel > div {
     background-color: var(--blank);
     border-radius: .5rem;
@@ -291,6 +296,15 @@ a.sidebar-row:active {
 
 .info-panel > div > div {
     margin: var(--margin);
+}
+
+.info-panel p {
+    white-space: normal; 
+    color: var(--text-normal);
+    line-height: .9rem;
+}
+
+.announcements > div > div {
     padding-top: var(--padding-large);
     border-top: var(--background) solid 1px;
 
@@ -301,13 +315,22 @@ a.sidebar-row:active {
     -webkit-box-orient: vertical;
 }
 
-.info-panel > div > div:first-child {
+.announcements > div > div:first-child {
     padding-top: 0;
     border-top: 0;
 }
 
-.info-panel p {
-    white-space: normal; 
-    color: var(--text-normal);
-    line-height: .9rem;
+.trending > div {
+    display: grid;
+}
+
+.trending > div > div {
+    display: grid;
+    align-self: center;
+    grid-template: 1fr / 1fr 4fr;
+    gap: 1rem;
+}
+
+.trending p {
+    align-self: center;
 }
