@@ -49,15 +49,15 @@ img {
     display: grid;
     grid-template: auto 1fr / var(--sidebar-width) 1fr;
 
-    --margin: 1rem;
+    --margin: .75rem;
     --padding-small: .25rem;
-    --padding-large: 1rem;
+    --padding-large: .75rem;
     --main-row-height: 3.5rem;
     --sidebar-width: 18rem;
 
     --icon: 1.5rem;
     --profile-small: 2.5rem;
-    --profile-large: 4rem;
+    --profile-large: 3.75rem;
 }
 
 .icon {
@@ -78,12 +78,12 @@ img {
 }
 
 h1 {
-    font-size: 1.85rem;
+    font-size: 1.65rem;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 500;
 }
 
@@ -141,6 +141,7 @@ a.sidebar-row:active {
     place-items: center;
 }
 
+.sidebar-row h1,
 .sidebar-row h2 {
     align-self: center;
 }
@@ -148,7 +149,6 @@ a.sidebar-row:active {
 .sidebar-row.dashboard,
 .sidebar-row.empty {
     border: none;
-    padding: 0 var(--padding-small);
 }
 
 .sidebar-row.dashboard img {
@@ -226,7 +226,7 @@ a.sidebar-row:active {
 }
 
 .header-row-2 p span {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 
@@ -263,11 +263,11 @@ a.sidebar-row:active {
 
 .main-content-grid {
     height: auto;
-    margin: var(--margin);
+    margin: 1.5rem var(--margin);
 
     display: grid;
-    grid-template: 1fr 1fr / 1fr 15rem;
-    gap: 1rem;
+    grid-template: 1fr / 1fr 15rem;
+    gap: 0 1rem;
 }
 
 .projects {
@@ -275,10 +275,10 @@ a.sidebar-row:active {
     grid-row: 1 / 3;
 }
 
-.info-panel {
+.info-column {
     display: grid;
-    grid-template-rows: auto 1fr;
-    gap: .5rem;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
     font-size: .75rem;
 }
 
@@ -286,6 +286,7 @@ a.sidebar-row:active {
     background-color: var(--blank);
     border-radius: .5rem;
     padding: var(--padding-small);
+    margin-top: var(--margin);
 }
 
 .info-panel > div > div {
@@ -308,5 +309,5 @@ a.sidebar-row:active {
 .info-panel p {
     white-space: normal; 
     color: var(--text-normal);
-    line-height: .85rem;
+    line-height: .9rem;
 }
