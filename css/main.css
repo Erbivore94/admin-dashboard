@@ -30,6 +30,7 @@ html {
 a, a:visited {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 button {
@@ -66,10 +67,12 @@ img {
 
 .profile-small {
     height: var(--profile-small);
+    width: var(--profile-small);
 }
 
 .profile-large {
     height: var(--profile-large);
+    width: var(--profile-large);
 }
 
 .profile-small,
@@ -263,7 +266,7 @@ a.sidebar-row:active {
 
 .main-content-grid {
     height: auto;
-    margin: 1.5rem var(--margin);
+    margin: 1.5rem var(--margin) var(--margin);
 
     display: grid;
     grid-template: 1fr / 1fr 15rem;
@@ -324,7 +327,7 @@ a.sidebar-row:active {
     display: grid;
 }
 
-.trending > div > div {
+.trending > div > div > a {
     display: grid;
     align-self: center;
     grid-template: 1fr / 1fr 4fr;
@@ -333,4 +336,9 @@ a.sidebar-row:active {
 
 .trending p {
     align-self: center;
+}
+
+.trending span {
+    color: var(--text-emphasis);
+    font-weight: 500;
 }
