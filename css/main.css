@@ -41,11 +41,8 @@ img {
     display: block;
 }
 
-body {
-    height: 100vh;
-}
-
 .container {
+    min-height: 100vh;
     display: grid;
     grid-template: auto 1fr / var(--sidebar-width) 1fr;
 
@@ -275,7 +272,7 @@ a.sidebar-row:active {
     margin-top: var(--gap);
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));    
+    grid-template-columns: repeat(auto-fit, minmax(22.5vw, 1fr));    
     gap: var(--gap);
 }
 
