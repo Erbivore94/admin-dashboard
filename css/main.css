@@ -160,7 +160,7 @@ a.sidebar-row:active {
 .header {
     background-color: var(--blank);
     color: var(--text-emphasis);
-    box-shadow: 0 .1rem 1rem .1rem var(--box-shadow);
+    box-shadow: .25rem .25rem .5rem .025rem var(--box-shadow);
 
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -282,6 +282,7 @@ a.sidebar-row:active {
     border-radius: .5rem;
     padding: var(--padding-large);
     border-left: var(--accent) .5rem solid;
+    box-shadow: .25rem .25rem .5rem .025rem var(--box-shadow);
 }
 .card > p {
     color: var(--text-normal);
@@ -312,6 +313,7 @@ a.sidebar-row:active {
     background-color: var(--blank);
     border-radius: .5rem;
     margin-top: var(--gap);
+    box-shadow: .25rem .25rem .5rem .025rem var(--box-shadow);
 }
 
 .info-panel > div > div {
