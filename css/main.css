@@ -37,23 +37,22 @@ button {
     cursor: pointer;
 }
 
-p {
-    white-space: nowrap;
-}
-
 img {
     display: block;
 }
 
+body {
+    height: 100vh;
+}
+
 .container {
-    min-height: 100vh;
     display: grid;
     grid-template: auto 1fr / var(--sidebar-width) 1fr;
 
-    --margin: .75rem;
+    --margin: 1rem;
     --gap: 1rem;
     --padding-small: .25rem;
-    --padding-large: .75rem;
+    --padding-large: 1rem;
     --main-row-height: 3.5rem;
     --sidebar-width: 18rem;
 
@@ -255,18 +254,10 @@ a.sidebar-row:active {
 
 /* --- MAIN CONTENT --- */
 
-.main-content {
-    background-color: var(--background);
-    z-index: -1;
-
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-
-    display: grid;
-}
-
 .main-content-grid {
-    margin: var(--gap);
+    z-index: -1;
+    background-color: var(--background);
+    padding: var(--gap);
 
     display: grid;
     grid-template: 1fr / 1fr 17.5rem;
@@ -291,6 +282,21 @@ a.sidebar-row:active {
 .card {
     background-color: var(--blank);
     font-size: .9rem;
+    border-radius: .5rem;
+    padding: var(--padding-large);
+    border-left: var(--accent) .5rem solid;
+}
+.card > p {
+    color: var(--text-normal);
+    font-size: .85rem;
+    padding-top: var(--padding-small);
+    padding-bottom: var(--padding-large);
+}
+
+.card > div {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 2.5rem);
+    justify-items: end;
 }
 
 .info-column {
@@ -308,7 +314,6 @@ a.sidebar-row:active {
 .info-panel > div {
     background-color: var(--blank);
     border-radius: .5rem;
-    padding: var(--padding-small);
     margin-top: var(--gap);
 }
 
@@ -317,7 +322,6 @@ a.sidebar-row:active {
 }
 
 .announcements p {
-    white-space: normal; 
     color: var(--text-normal);
     line-height: .9rem;
 }
