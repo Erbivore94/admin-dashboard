@@ -98,6 +98,9 @@ h3 {
     color: var(--blank);
     background-color: var(--primary);
     z-index: 1;
+    position: sticky;
+    top: 0;
+    height: 100vh;
 
     grid-column: 1 / 2;
     grid-row: 1 / 3;
@@ -161,6 +164,8 @@ a.sidebar-row:active {
     background-color: var(--blank);
     color: var(--text-emphasis);
     box-shadow: .25rem .25rem .5rem .025rem var(--box-shadow);
+    position: sticky;
+    top: 0;
 
     grid-column: 2 / 3;
     grid-row: 1 / 2;
