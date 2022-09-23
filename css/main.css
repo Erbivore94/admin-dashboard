@@ -27,7 +27,7 @@ html {
     outline: none;
 }
 
-a, a:visited {
+a, a:visited, a:link {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
@@ -257,7 +257,6 @@ a.sidebar-row:active {
 /* --- MAIN CONTENT --- */
 
 .main-content-grid {
-    z-index: -1;
     background-color: var(--background);
     padding: var(--gap);
 
